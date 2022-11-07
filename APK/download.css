@@ -23,6 +23,13 @@ ul li{
 @media (max-width: 800px){
     body{
         display: block;
+        font-weight: bold;
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    section h1{
+        color: #00B0F0;
     }
     .home{
         width: 100%;

@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+       <!--/*espace de modification blog personel*/-->
+       <style>
+        .art-sheet{width: 100%; margin: 0px;}
+        img{width: 100%;margin: 0px;}
+        .art-header{
+          display: none;
+          margin: 0 auto;
+          background-repeat: no-repeat;
+          height: 250px;
+          background-image: url(images/header.jpg);
+          background-position: center top;
+          position: relative;
+          z-index: auto !important;
+      }
+        #LinkList99,.art-block{
+          background: black;
+          color: white;
+        }
+        .art-block, .art-postmetadataheader {
+          display: none;
+        }
+        .art-postheader, .post-footer-line, .ttr_post_inner_box, .blog-pager, .column-right-outer, .art-blockcontent{display:none;}
+        .art-postcontent, .site-content{
+       background: white;
+          padding:0px;
+      }
+       .art-nav .art-hmenu li a{
+          color: white;
+        }
+    
+     .art-nav{
+        display: block;
+       background: black;
+       color: white;
+    }
+        .art-post{
+          background: black;
+        }
+        
+    .art-layout-wrapper {
+    position: relative;
+    margin: 0px auto 0 auto;
+    z-index: auto !important;
+}
+        .art-main{width: 100%; margin: 0px;}
+        #primarypbt, #ttr_content{width: 100%; margin:0px; padding: 0px;}
+        #mainpbt{width: 100%; margin:10px; padding: 0px;}
+        #sidebar1{display:none;}
+        
+        #contentpbt {
+          padding-left: 0px;
+          padding-right: 2px;
+         width: 100%;
+      }
+        @media screen and (max-width: 1210px){
+            #contentpbt {
+          padding-left: 2px;
+          padding-right: 2px;
+          max-width: 100%;
+      }
+          .art-sheet{width: 100%; margin: 0px;}
+        }
+       @media screen and (max-width: 800px){
+       	.art-sheet{width: 100%; margin: 0px;}
+       }
+    </style>
+
+
+    <style>
+        body{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ button{
+    background: rgb(0, 89, 253);
+    border: none;
+    padding: 10px;
+    color: white;
+    text-transform: capitalize;
+    border: 1px solid lime;
+ }
+
+ button:hover{
+    background: orangered;
+    cursor: pointer;
+ }
+
+header{
+    background-image:url('https://drive.google.com/uc?id=17TpylTflwf_0-fz1ii3R9qEjUYGK_fgh') ;
+    height: 100vh;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+}
+.headera{
+    opacity: 0.9;
+    width: 70%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 50px;
+    padding-top: 5px;
+    background: white;
+}
+
+.headerb{
+    opacity: 1;
+    padding: 30px;
+    padding-top: 2px;
+}
+
+header .image{
+    width: 200px;
+    margin: auto;
+}
+.headerb h1{
+    text-transform: uppercase;
+    font-size: 36px;
+    text-align: center;
+}
+.headerb h2{
+    text-transform: uppercase;
+    font-size: 26px;
+    text-align: center;
+}
+
+.headerb p{
+    font-size: 22px;
+    padding:0px 50px 0px 50px;
+    text-align: center;
+}
+
+
+header .btn{
+    width: fit-content;
+    margin: auto;
+}
+
+/* formulaire d'abonnement*/
+.formulaire{
+    background: black;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    margin-bottom: 80px;
+}
+
+.formulaire #msg{
+    display: none;
+    color: black;
+    background-color: white;
+    width: 300px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+.formulaire #msg h2{
+    text-transform: uppercase;
+    text-align: center;
+}
+.formulaire #msg p{
+    font-size: 18px;
+    text-align: center;
+}
+form h3{
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.formFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formulaire .input{
+    background-color: white;
+    margin: 5px;
+    width: fit-content;
+}
+.formulaire form input{
+    padding: 9px;
+    border: none;
+}
+.formulaire form input:focus, select:focus{
+    border: none;
+    outline: none;
+}
+.formulaire form #code{
+    padding: 9px;
+    border: none;
+    width: 100px;
+}
+
+
+/* information sur les cours du blog*/
+.infosCours{
+    margin: auto;
+    width: 80%;
+    margin-bottom: 40px;
+}
+.infos{
+    display: flex;
+}
+
+.infos ul{
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    list-style: none;
+    margin: 30px 10px 10px 10px;
+    box-shadow: 0px 4px 8px 3px black;
+}
+
+.infos ul i{
+    font-size: 38px;
+    margin-right: 10px;
+}
+
+.infos ul h3{
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.infos ul h3 span{
+    color: red;
+    font-size: 10px;
+    position: relative;
+    
+}
+.infos ul:hover{
+    box-shadow: 0px 1px 5px 5px rgb(0, 106, 245);
+}
+
+.infosCours h4{
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    margin:30px 2px 2px 2px;
+}
+.infosCours hr{
+    width: 50%;
+    margin-top: 3px;
+}
+
+
+/*detail sur la formation disponible*/
+.infosform{
+    margin-top: 70px;
+}
+.DF{
+    background: black;
+    padding: 20px;
+    margin-top: 30px;
+}
+.infosform h4{
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    margin:30px 2px 2px 2px;
+}
+.infosform hr{
+    width: 50%;
+    margin-top: 3px;
+}
+
+.detailsForm{
+    background-color: white;
+    display: flex;
+    width: 80%;
+    margin:10px auto;
+    padding: 10px;
+}
+.detailsForm .top{
+    display: none;
+}
+.detailsForm .bottom{
+    display: block;
+}
+.detailsForm div{
+    width: 100%;
+    height: 100%;
+}
+.DF .image{
+    max-height: 310px;
+    overflow: hidden;
+    border: 1px solid red;
+}
+.DF h4{
+    font-size: 28px;
+    margin-top: 10px;
+}
+.DF p{
+    font-size: 18px;
+}
+.DF .time{
+    width: fit-content;
+    margin: auto;
+}
+
+.DF #timer{
+    width: fit-content;
+    color: white;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    margin: 10px;
+}
+
+#timer li{
+    margin: 10px;
+    list-style: none;
+    font-size: 36px;
+}
+#timer .fa{
+    color: white;
+}
+
+.DF .btn{
+    border: 1px solid lime;
+    width: fit-content;
+    margin: auto;
+}
+
+/* partie section application details*/
+    .apps{
+        width: 80%;
+        margin: 100px auto;
+    }
+    .appsDetails{
+       display: flex; 
+       align-items: center;
+    }
+
+    .apps h4{
+        font-size: 36px;
+        text-align: center;
+        margin: 10px;
+    }
+    .apps hr{
+        width: 50%;
+        margin-bottom: 40px;
+    }
+    .apps ul {
+        padding: 2px;
+    }
+    .apps ul li{
+        list-style: none;
+        font-size: 18px;
+        margin-top: 15px;
+        margin: 10px;
+        text-align: justify;
+    }
+    .apps ul strong{
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    </style>
+
+    <style>
+        @media (max-width: 800px){
+    body{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+    img{
+        width: 100%;
+    }
+     button{
+        background: rgb(0, 89, 253);
+        font-size: 4vw;
+        border: none;
+        padding: 10px;
+        color: white;
+        text-transform: capitalize;
+        margin: 5px;
+     }
+    
+     button:hover{
+        background: orangered;
+        cursor: pointer;
+     }
+    
+    header{
+        background-image:url('https://drive.google.com/uc?id=17TpylTflwf_0-fz1ii3R9qEjUYGK_fgh') ;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        opacity: 0.9;
+        display: flex;
+        justify-content: center;
+    }
+    .headera{
+        opacity: 0.9;
+        width: 100%;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 5px;
+        padding-top: 5px;
+        background: white;
+    }
+    
+    .headerb{
+        opacity: 1;
+        padding: 3px;
+        padding-top: 2px;
+    }
+    
+    header .image{
+        width: 200px;
+        margin: auto;
+    }
+    .headerb h1{
+        text-transform: uppercase;
+        font-size: 6vw;
+        text-align: center;
+    }
+    .headerb h2{
+        text-transform: uppercase;
+        font-size: 5.5vw;
+        text-align: center;
+    }
+    
+    .headerb p{
+        font-size: 5vw;
+        padding:1px;
+        text-align: center;
+    }
+    
+    
+    header .btn{
+        width: 100%;
+        margin: auto;
+        display: flex;
+    }
+    
+    /* formulaire d'abonnement*/
+    .formulaire{
+        background: black;
+        padding: 10px;
+        margin: 10px auto;
+        width: 90%;
+    }
+    form{
+        width: 80%;
+        background: gray;
+        margin: auto;
+    }
+    form h3{
+        font-size: 6vw;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .formFlex{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inputFlex{
+        display: flex;
+    }
+    .formulaire .input{
+        background-color: white;
+        margin: 5px;
+        width: 100%;
+        overflow: hidden;
+    }
+    .formulaire form input{
+        width: 100%;
+        padding: 9px;
+        border: none;
+    }
+    .formulaire form input:focus, select:focus{
+        border: none;
+        outline: none;
+    }
+    .formulaire form #code{
+        padding: 9px;
+        border: none;
+        width: 60px;
+    }
+    .infosCours{
+        margin: auto;
+        width: 100%;
+    }
+    
+    .infos{
+        flex-wrap: wrap;
+    }
+    
+    .infosCours h4{
+        font-size: 28px;
+        text-transform: uppercase;
+        text-align: center;
+        margin:30px 2px 2px 2px;
+    }
+    .infosCours hr{
+        width: 50%;
+        margin-top: 3px;
+    }
+
+
+
+
+    .infos ul{
+        display: inline-block;
+        width: 100%;
+        padding: 10px;
+        list-style: none;
+        margin: 10px 2px 10px 2px;
+        box-shadow: 0px 4px 8px 3px black;
+    }
+    
+    .infos ul i{
+        font-size: 38px;
+        margin-right: 10px;
+    }
+    
+    .infos ul h3{
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+    .infos ul h3 span{
+        color: red;
+        font-size: 10px;
+        position: relative;
+        
+    }
+    .infos ul:hover{
+        box-shadow: 0px 1px 5px 5px rgb(0, 106, 245);
+    }
+    
+    .infosCours h4{
+        font-size: 28px;
+        text-transform: uppercase;
+        text-align: center;
+        margin:30px 2px 2px 2px;
+    }
+    .infosCours hr{
+        width: 50%;
+        margin-top: 3px;
+    }
+    
+    
+    /*detail sur la formation disponible*/
+    .infosform{
+        margin-top: 7px;
+        width: 100%;
+    }
+    .DF{
+        background: black;
+        padding: 0px;
+        margin-top: 3px;
+        width: 100%;
+    }
+    .infosform h4{
+        font-size: 28px;
+        text-transform: uppercase;
+        text-align: center;
+        margin:30px 2px 2px 2px;
+    }
+    .infosform hr{
+        width: 50%;
+        margin-top: 3px;
+    }
+    
+    .detailsForm{
+        background-color: white;
+        display: flex;
+        width: 80%;
+        margin:10px auto;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    .detailsForm div{
+        width: 100%;
+        height: 100%;
+    }
+    .DF .image{
+        max-height: 260px;
+        overflow: hidden;
+        border: 1px solid red;
+    }
+    .DF h4{
+        font-size: 28px;
+        margin-top: 50px;
+    }
+    .DF p{
+        font-size: 18px;
+    }
+    .DF .time{
+        width: 100%;
+        margin: auto;
+    }
+    
+    .DF .time #timer{
+        width: 90%;
+        align-items: center;
+        display: flex;
+        margin: 10px auto;
+        padding: 1px;
+    }
+    .div1{
+        border: lime;
+        background: blue;
+    }
+
+.DF .time #timer li{
+    background: white;
+    color: black;
+    padding: 5px;
+}
+
+    .DF .btn{
+        width: 70%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(0, 89, 253);
+    }
+    .DF .btn:hover{
+        background-color: orangered;
+    }
+    .DF .btn button{
+        background-color: none;
+    }
+    .DF .btn button:hover{
+        background: none;
+    }
+    
+    #timer li{
+        margin: 10px;
+        list-style: none;
+        font-size: 5vw;
+    }
+    #timer .fa{
+        color: white;
+    }
+
+
+    .detailsForm{
+        background-color: white;
+        flex-wrap: wrap;
+        width: 90%;
+        margin:10px auto;
+        padding: 10px;
+    }
+    .detailsForm .top{
+        display: block;
+    }
+    .detailsForm .bottom{
+        display: none;
+    }
+    .detailsForm div{
+        width: 100%;
+        height: 100%;
+    }
+    .DF .image{
+        max-height: 260px;
+        overflow: hidden;
+        border: 1px solid red;
+    }
+    .DF h4{
+        font-size: 28px;
+        margin-top: 50px;
+    }
+    .DF p{
+        font-size: 5vw;
+        text-align: justify;
+    }
+
+
+
+    .appsDetails{
+        flex-wrap: wrap;
+    }
+    .apps h4{
+        font-size: 7vw;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="headera">
+            <div class="headerb">
+                <div class="image"><img src="https://drive.google.com/uc?id=1V9jAvt9evVq1BjgO6TF8w-J_5k2e-rsv" id="imagenet" alt=""></div>
+                <h1>Bienvenue sur <strong><span style="color: rgb(0, 26, 255);">S</span><span style="color: orangered;">I</span> Tech</strong></h1>
+                <h2>Apprendre l'informatique en tant que debutant gratuitement pour devenir professionnelle</h2>
+                <p>
+                    Sur ce blog vous allez apprendre l'informatique et vous adaptez a tous les niveaux étape par étape et recevez tous nos formations par WhatsApp en remplissant le formulaire.
+                </p>
+
+                <p>
+                    Pour suivre tous nos formation, telecharger notre aplication Sitech Plus
+                </p>
+            </div>
+            <div class="btn">
+                <button><a href="#infos">Plus infos sur le blog</a></button>
+                <button><a href="https://sitechinfos.blogspot.com/p/formation_16.html"> Telecharger notre Application</a></button>
+            </div>
+        </div>
+    </header>
+    <a href="https://www.blogger.com/follow.g?view=FOLLOW&blogID=6522397955125634967" id="lien"></a>
+    <div class="formulaire">
+        <div id="msg">
+            <h2>Merci d'avoir abonnée a mon blog</h2>
+            <p>Vous recevez tous nos formations par mail et whatsapp, Merci !!!</p>
+        </div>
+        <form autocomplete="off" method="post" name="google-sheet" id="myForm">
+            <h3>Abonnez-vous, Maintenant</h3>
+            <div class="formFlex">
+                <div class="input">
+                    <input type="text" name="Nom" id="name" placeholder="Je m'appelle Ruban, et Vous?" required>
+                </div>
+                <div class="input">
+                    <input type="text" name="Email" id="name" placeholder="Votre Emial">
+                </div>
+                <div class="input inputFlex">
+                    <select name="Code" id="code" onChange="update()" required>
+                        <option></option>
+                        <option value="+229">Benin (+229)</option>
+                        <option value="+257">Burundi (+257)</option>
+                        <option value="+226">Burkina Faso (+226)</option>
+                        <option value="+237">Cameroon (+237)</option>
+                        <option value="+1">Canada (+1)</option>
+                        <option value="+238">Cape Verde (+238)</option>
+                        <option value="+236">Central African Republic (+236)</option>
+                        <option value="+242">Congo (+242)</option>
+                        <option value="+242">Congo, the Democratic Republic of the (+242)</option>
+                        <option value="+225">Cote D'Ivoire (+225)</option>
+                        <option value="+1809">Dominican Republic (+1809)</option>
+                        <option value="+298">Faroe Islands (+298)</option>
+                        <option value="+594">French Guiana (+594)</option>
+                        <option value="+509">Haiti (+509)</option>
+                        <option value="+352">Luxembourg (+352)</option>
+                        <option value="+853">Macao (+853)</option>
+                        <option value="+389">Macedonia, the Former Yugoslav Republic of (+389)</option>
+                        <option value="+261">Madagascar (+261)</option>
+                        <option value="+223">Mali (+223)</option>
+                        <option value="+377">Monaco (+377)</option>
+                        <option value="+227">Niger (+227)</option>
+                        <option value="+234">Nigeria (+234)</option>
+                        <option value="+262">Reunion (+262)</option>
+                        <option value="+250">Rwanda (+250)</option>
+                        <option value="+268">Swaziland (+268)</option>
+                        <option value="+228">Togo (+228)</option>
+                        <option value="+690">Tokelau (+690)</option>
+                        <option value="+676">Tonga (+676)</option>
+                        <option value="+260">Zambia (+260)</option>
+                        <option value="+263">Zimbabwe (+263)</option>
+                      </select>
+                    <input type="text" name="Phone" id="phone" placeholder="Votre Numéro" minlength="6" required >
+                </div>
+                <div class="input">
+                    <input type="submit" name="Nom" id="name" value="je m'abonne" >
+                </div>
+            </div>
+        </form>
+    </div>
+    <main>
+        <section class="infosCours" id="infos">
+            <h4>Fomrations diponibles</h4><hr>
+           <div class="infos">
+            <ul>
+                <h3><i class="fa fa-folder"></i> Informatique Bureautique <span>Gartuit</span> </h3>
+                <li>Microsoft Office</li>
+                <li>Suites Google Drive</li>
+                <li>Widnows et Inetrnet</li>
+            </ul>
+
+            <ul>
+                
+                <h3><i class="fa fa-tablet"></i> Powerpoint designe <span>Gartuit</span></h3>
+                <li>Création des animations</li>
+                <li>Création des presentations</li>
+                <li>Création de vidéo publicité</li>
+            </ul>
+
+            <ul>
+                
+                <h3><i class="fa fa-android"></i> Autres produits <span>Gartuit</span></h3>
+                <li>Informatique Bureautique</li>
+                <li>Les suites de google Drive</li>
+                <li>La programmation web (Html et Css)</li>
+            </ul>
+           </div>
+        </section>
+
+        <section class="infosform">
+            <h4>Fomrations diponibles</h4><hr>
+           <div class="DF">
+            <div class="time">
+                <ul id="timer">
+                    <li> <span id="day"></span><b>:</b><span class="t">Jrs</span></li>
+                    <li><span id="heure"></span><b>:</b><span class="t">Hrs</span></li>
+                    <li><span id="minutes"></span><b>:</b><span class="t">Mn</span></li>
+                    <li><span id="second"></span><b>:</b><span class="t" >Sc</span> <div id="div1" class="fa"></div></li>
+                  </ul>
+                  <div class="btn"><button onclick="formation()">Partcipez dans la formation</button></div>
+            </div>
+            <div class="detailsForm">
+                <div class="image top"><img src="https://drive.google.com/uc?id=1UKt9HoiupSe5yrsWib50iEL0TSKTBrF-" id="imagenet" alt=""></div>
+                <div class="texte">
+                    <h4>Formation informatique</h4>
+                    <p>
+                        L'informatique est devenue aujourd'hui un metier de base de tous les metiers,
+                        et surtout un premier surpport poour vos travail.
+                    </p>
+
+                    <p>
+                        A cet effect, nous profiterons de la mise en place des formations ou nous devons
+                        vous montrer comment utiliser l'informatique dans vos travails
+                    </p>
+
+                    <p>
+                        Pour participer dans tous nos formations, télécharger notre application,
+                        et inscrivez, comme ca vous serez toujour au courrant de tous nos formation gratuite
+
+                    </p>
+
+                    <button>Plus details</button>
+                </div>
+                <div class="image bottom"><img src="https://drive.google.com/uc?id=1UKt9HoiupSe5yrsWib50iEL0TSKTBrF-" id="imagenet" alt=""></div>
+            </div>
+           </div>
+        </section>
+
+        <section class="apps" id="apps" style="display: none;">
+            <h4>Télécharger l'application sitech</h4> <hr>
+            <div class="appsDetails">
+                <div class="image"><img src="Images/logo.png" alt="" id="imagenet"></div>
+                <div class="texte">
+                    
+                    <ul>
+                        <strong> Document gratuit a télécharger</strong>
+                        <li>
+                            Des documents gratuit a telecharger en utilisant seulement 
+                            les points que vous avez gagner sur l'application a chaque 
+                            fois que vous ouvrez l'application et lire des videos 
+                            disponible
+                        </li>
+                    </ul>
+                    <ul>
+                        <strong> Astuces et articles en informtaique</strong>
+                        <li>
+                            Des astuces et des articles pour vous aider a mieux travailler 
+                            sur votre ordinateur ou votre android, ameliorer votre metier 
+                            en utilisant notre application gratuitement.
+                        </li>
+                    </ul>
+                    <button>Telecharger l'application Si Tech</button>
+                </div>
+                <div class="image"><img src="https://drive.google.com/uc?id=16AEswT-joyD8KzfR9G8arYYFZNoUGDo8" id="imagenet" alt=""></div>
+            </div>
+
+        </section>
+    </main>
+    <footer></footer>
+
+    <script src="js/script.js"></script>
+
+    <script type="text/javascript">
+        function update() {
+            var select = document.getElementById('code');
+            var option = select.options[select.selectedIndex];
+
+            document.getElementById('phone').value = option.value;
+        }
+
+        update();
+    </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzYglbFFmreDw7gp2U16iRyvrjjyJmRCh3Cu7-xl9dx5zvPfH8byTlAH6dODsp63gva/exec'
+    const form = document.forms['google-sheet']
+
+    form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => document.getElementById('myForm').style.display = "none")
+        .then(response => document.getElementById('msg').style.display = "block")
+        .then(response => window.location = document.getElementById('lien'))
+        .then(response => document.getElementById('name').value = '')
+        .then(response => document.getElementById('email').value = '')
+        .then(response => document.getElementById('phone').value = '')
+        .catch(error => console.error('Error!', error.message))
+    });
+
+</script>
+</body>
+</html>

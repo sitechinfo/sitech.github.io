@@ -1,0 +1,297 @@
+body{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ button{
+    background: rgb(0, 89, 253);
+    border: none;
+    padding: 10px;
+    color: white;
+    text-transform: capitalize;
+    border: 1px solid lime;
+ }
+
+ button:hover{
+    background: orangered;
+    cursor: pointer;
+ }
+
+
+header{
+    background-image:url('https://drive.google.com/uc?id=17TpylTflwf_0-fz1ii3R9qEjUYGK_fgh') ;
+    height: 100vh;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+}
+.headera{
+    opacity: 0.9;
+    width: 70%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 50px;
+    padding-top: 5px;
+    background: white;
+}
+
+.headerb{
+    opacity: 1;
+    padding: 30px;
+    padding-top: 2px;
+}
+
+header .image{
+    width: 200px;
+    margin: auto;
+}
+.headerb h1{
+    text-transform: uppercase;
+    font-size: 36px;
+    text-align: center;
+}
+.headerb h2{
+    text-transform: uppercase;
+    font-size: 26px;
+    text-align: center;
+}
+
+.headerb p{
+    font-size: 22px;
+    padding:0px 50px 0px 50px;
+    text-align: center;
+}
+
+
+header .btn{
+    width: fit-content;
+    margin: auto;
+}
+
+/* formulaire d'abonnement*/
+.formulaire{
+    background: black;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    margin-bottom: 80px;
+}
+
+.formulaire #msg{
+    display: none;
+    color: black;
+    background-color: white;
+    width: 300px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+.formulaire #msg h2{
+    text-transform: uppercase;
+    text-align: center;
+}
+.formulaire #msg p{
+    font-size: 18px;
+    text-align: center;
+}
+form h3{
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.formFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formulaire .input{
+    background-color: white;
+    margin: 5px;
+    width: fit-content;
+}
+.formulaire form input{
+    padding: 9px;
+    border: none;
+}
+.formulaire form input:focus, select:focus{
+    border: none;
+    outline: none;
+}
+.formulaire form #code{
+    padding: 9px;
+    border: none;
+    width: 100px;
+}
+
+
+/* information sur les cours du blog*/
+.infosCours{
+    margin: auto;
+    width: 80%;
+    margin-bottom: 40px;
+}
+.infos{
+    display: flex;
+}
+
+.infos ul{
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    list-style: none;
+    margin: 30px 10px 10px 10px;
+    box-shadow: 0px 4px 8px 3px black;
+}
+
+.infos ul i{
+    font-size: 38px;
+    margin-right: 10px;
+}
+
+.infos ul h3{
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.infos ul h3 span{
+    color: red;
+    font-size: 10px;
+    position: relative;
+    
+}
+.infos ul:hover{
+    box-shadow: 0px 1px 5px 5px rgb(0, 106, 245);
+}
+
+.infosCours h4{
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    margin:30px 2px 2px 2px;
+}
+.infosCours hr{
+    width: 50%;
+    margin-top: 3px;
+}
+
+
+/*detail sur la formation disponible*/
+.infosform{
+    margin-top: 70px;
+}
+.DF{
+    background: black;
+    padding: 20px;
+    margin-top: 30px;
+}
+.infosform h4{
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    margin:30px 2px 2px 2px;
+}
+.infosform hr{
+    width: 50%;
+    margin-top: 3px;
+}
+
+.detailsForm{
+    background-color: white;
+    display: flex;
+    width: 80%;
+    margin:10px auto;
+    padding: 10px;
+}
+.detailsForm .top{
+    display: none;
+}
+.detailsForm .bottom{
+    display: block;
+}
+.detailsForm div{
+    width: 100%;
+    height: 100%;
+}
+.DF .image{
+    max-height: 310px;
+    overflow: hidden;
+    border: 1px solid red;
+}
+.DF h4{
+    font-size: 28px;
+    margin-top: 10px;
+}
+.DF p{
+    font-size: 18px;
+}
+.DF .time{
+    width: fit-content;
+    margin: auto;
+}
+
+.DF #timer{
+    width: fit-content;
+    color: white;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    margin: 10px;
+}
+
+#timer li{
+    margin: 10px;
+    list-style: none;
+    font-size: 36px;
+}
+#timer .fa{
+    color: white;
+}
+
+.DF .btn{
+    border: 1px solid lime;
+    width: fit-content;
+    margin: auto;
+}
+
+/* partie section application details*/
+    .apps{
+        width: 80%;
+        margin: 100px auto;
+    }
+    .appsDetails{
+       display: flex; 
+       align-items: center;
+    }
+
+    .apps h4{
+        font-size: 36px;
+        text-align: center;
+        margin: 10px;
+    }
+    .apps hr{
+        width: 50%;
+        margin-bottom: 40px;
+    }
+    .apps ul {
+        padding: 2px;
+    }
+    .apps ul li{
+        list-style: none;
+        font-size: 18px;
+        margin-top: 15px;
+        margin: 10px;
+        text-align: justify;
+    }
+    .apps ul strong{
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
